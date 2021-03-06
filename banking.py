@@ -4,8 +4,8 @@ import sqlite3
 # SQL
 conn = sqlite3.connect('card.s3db')
 cur = conn.cursor()
-cur.execute("DELETE FROM card")
-conn.commit()
+#cur.execute("DELETE FROM card")
+#conn.commit()
 cur.execute(
     "CREATE TABLE IF NOT EXISTS card (id INTEGER PRIMARY KEY, number TEXT, pin TEXT, balance INTEGER DEFAULT 0);")
 conn.commit()
